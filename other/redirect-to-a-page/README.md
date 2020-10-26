@@ -54,5 +54,8 @@ http.createServer(function(req, res) {
 def thing(page):
   return redirect("http://www.new-website.com/blog/" + page, code=301)
 ```
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iI9fb-nKatY/0.jpg)](https://www.youtube.com/watch?v=iI9fb-nKatY)
+
 # References
 * [How to Redirect a Web Page](https://css-tricks.com/redirect-web-page/)
