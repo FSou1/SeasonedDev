@@ -39,8 +39,8 @@ module.exports = {
             return null;
         }
 
-        const lastCompletedBuy = this.getLastCompleted(buyOrder.side, buyOrder.symbol, completedOrders);
-        if(lastCompletedBuy && lastCompletedBuy.price === buyOrder.price) {
+        const lastCompleted = this.getLastCompleted(buyOrder.symbol, completedOrders);
+        if(lastCompleted && lastCompleted.price === buyOrder.price) {
             return null;
         }
 
@@ -91,17 +91,17 @@ module.exports = {
             return null;
         }
 
-        const lastCompletedSell = this.getLastCompleted(sellOrder.side, sellOrder.symbol, completedOrders);
-        if(lastCompletedSell && lastCompletedSell.price === sellOrder.price) {
+        const lastCompleted = this.getLastCompleted(sellOrder.symbol, completedOrders);
+        if(lastCompleted && lastCompleted.price === sellOrder.price) {
             return null;
         }
 
         return sellOrder;
     },
 
-    getLastCompleted: function(side, symbol, completedOrders) {
+    getLastCompleted: function(symbol, completedOrders) {
         return completedOrders
-            .filter(o => o.side === side && o.symbol === symbol)
+            .filter(o => o.symbol === symbol)
             .sort((a, b) => b.updateTime - a.updateTime)
             .pop();
     },

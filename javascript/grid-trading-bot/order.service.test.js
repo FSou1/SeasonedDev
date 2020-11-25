@@ -39,10 +39,10 @@ describe('create buy & sell orders if', () => {
     });
 });
 
-describe('create a sell order only if', () => {
+describe('do not create a buy order if', () => {
     test.each([
         [12600, 12500, 12750]
-    ])('price (%i), the last completed order (%i) is a buy duplicate', (price, lastBuyPrice, sellPrice) => {
+    ])('a price %i is higher than the last completed buy %i', (price, lastBuyPrice, sellPrice) => {
         const openOrders = [];
         const completedOrders = [
             {
@@ -77,10 +77,11 @@ describe('create a sell order only if', () => {
     });
 });
 
-describe('create a buy order only if', () => {
+describe('do not create a sell order if', () => {
     test.each([
-        [12749, 12750, 12500]
-    ])('price (%i), the last completed order (%i) is a buy duplicate', (price, lastSellPrice, buyPrice) => {
+        [12749, 12750, 12500],
+        [14400, 14500, 14250]
+    ])('a price %i is lower than the last completed sell %i', (price, lastSellPrice, buyPrice) => {
         const openOrders = [];
         const completedOrders = [
             {
@@ -111,6 +112,45 @@ describe('create a buy order only if', () => {
                 price: buyPrice
             },
             sell: null
+        });
+    });
+});
+
+describe('do not create a buy order if', () => {
+    test.each([
+        [13050, 13000, 13250],
+        [14001, 14000, 14250]
+    ])('a price %i is higher than the last completed sell %i', (price, lastSellPrice, sellPrice) => {
+        const openOrders = [];
+        const completedOrders = [
+            {
+                symbol: 'BTCUSDT',
+                side: 'SELL',
+                quantity: pair.quantity,
+                price: lastSellPrice,
+                updateTime: 1604617029107
+            }
+        ];
+        const balances = [
+            {
+                asset: 'BTC',
+                available: 0.06
+            },
+            {
+                asset: 'USDT',
+                available: 660
+            }
+        ];
+
+        const nextOrders = service.getNextOrders(price, pair, openOrders, balances, completedOrders);
+        expect(nextOrders).toStrictEqual({
+            buy: null,
+            sell: {
+                symbol: 'BTCUSDT',
+                side: 'SELL',
+                quantity: pair.quantity,
+                price: sellPrice
+            }
         });
     });
 });
