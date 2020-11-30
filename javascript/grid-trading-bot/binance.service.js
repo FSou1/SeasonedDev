@@ -11,31 +11,19 @@ let service = function BinanceService(options = {}) {
     return {
         getPrice: (symbol) => {
             return BinanceService.exchange.prices(symbol)
-                .then(data => Number.parseFloat(data[symbol]))
-                .catch(error => {
-                    throw new Error(error);
-                });
+                .then(data => Number.parseFloat(data[symbol]));
         },
 
         getOpenOrders: (symbol) => {
-            return BinanceService.exchange.openOrders(symbol)
-                .catch(error => {
-                    throw new Error(error);
-                });
+            return BinanceService.exchange.openOrders(symbol);
         },
 
         getBalance: () => {
-            return BinanceService.exchange.balance()
-                .catch(error => {
-                    throw new Error(error);
-                });
+            return BinanceService.exchange.balance();
         },
 
         getTrades: (symbol) => {
-            return BinanceService.exchange.trades(symbol)
-                .catch(error => {
-                    throw new Error(error);
-                });
+            return BinanceService.exchange.trades(symbol);
         }
     };
 };

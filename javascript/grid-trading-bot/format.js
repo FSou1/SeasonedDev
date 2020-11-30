@@ -17,5 +17,9 @@ module.exports = {
             output.push(`${o.symbol} | ${o.side} | $${+o.price} | ${+o.origQty} | $${(o.price * o.origQty).toFixed(2)}`);
         }
         return output.join('\n');
+    },
+
+    formatPrice: function(price) {
+        return `$${+price}`;
     }
 };
