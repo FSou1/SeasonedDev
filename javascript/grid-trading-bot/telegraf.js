@@ -10,7 +10,13 @@ const binance = new binanceService({
 const { Telegraf } = require('telegraf');
 
 const bot = new Telegraf(config.bot.telegram.token);
+
 bot.command('balance', (ctx) => {
     binance.getBalance().then(data => ctx.reply(format.formatBalance(data)));
 });
+
+bot.command('openorders', (ctx) => {
+    binance.getOpenOrders().then(data => ctx.reply(format.formatOpenOrders(data)));
+});
+
 bot.launch();
