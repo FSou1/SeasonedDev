@@ -29,4 +29,10 @@ bot.command('btcusdt', (ctx) => {
         .catch(error => console.error(error));
 });
 
+bot.command('trades', (ctx) => {
+    binance.getTrades('BTCUSDT')
+        .then(data => ctx.reply(format.formatTrades(data)))
+        .catch(error => console.error(error));
+});
+
 bot.launch();

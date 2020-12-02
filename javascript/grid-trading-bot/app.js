@@ -1,12 +1,14 @@
+const config = require('./config');
+
 const binanceService = require('./binance.service');
 
 const binance = new binanceService({
-    apikey: configuration.exchange.apikey,
-    apisecret: configuration.exchange.apisecret
+    apikey: config.exchange.apikey,
+    apisecret: config.exchange.apisecret
 });
 
 /* Start */
-const pairs = configuration?.bot?.trading?.pairs;
+const pairs = config?.bot?.trading?.pairs;
 if (!pairs?.length) {
     throw new Error('Configuration error: pairs is null or empty')
 }
