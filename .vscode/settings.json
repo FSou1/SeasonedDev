@@ -1,0 +1,4 @@
+{
+    "deno.enable": true,
+    "typescript.tsdk": "C:/Users/myfso/AppData/Roaming/npm/node_modules/typescript/lib"
+}
