@@ -1,6 +1,6 @@
 import {
-    assertEquals,
-    assertArrayIncludes
+  assertArrayIncludes,
+  assertEquals,
 } from "https://deno.land/std@0.82.0/testing/asserts.ts";
 
 Deno.test("hello world #1", () => {
