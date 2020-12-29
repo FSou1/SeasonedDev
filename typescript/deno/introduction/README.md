@@ -51,3 +51,23 @@ Try it out:
 ```
 deno run --allow-net http-web-server/index.ts
 ```
+
+# Tcp server
+
+Listening for TCP port connections with Deno.listen
+
+Try it out:
+
+```
+deno run --allow-net tcp-server/index.ts
+```
+
+# Watch file system events
+
+Watch for file system events
+
+Try it out:
+
+```
+deno run --allow-read watch-file-system/index.ts
+```
