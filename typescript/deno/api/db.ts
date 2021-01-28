@@ -1,5 +1,4 @@
-import { Collection } from "https://deno.land/x/mongo@v0.21.0/src/collection/collection.ts";
-import { Bson, MongoClient } from "./deps.ts";
+import { Bson, Collection, MongoClient } from "./deps.ts";
 
 async function connect(): Promise<Collection<IGistSchema>> {
   const client = new MongoClient();

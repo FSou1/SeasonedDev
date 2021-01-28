@@ -4,8 +4,19 @@ import { create } from "./handlers/create.ts";
 import { remove } from "./handlers/remove.ts";
 import { get } from "./handlers/get.ts";
 import { update } from "./handlers/update.ts";
+import { auth } from "./handlers/auth.ts";
+import { authorized } from "./middlewares/authorized.ts";
 
 const app = new Application();
+
+const anonymousRouter = new Router();
+
+anonymousRouter
+  .post("/auth", auth);
+
+app.use(anonymousRouter.routes());
+
+app.use(authorized);
 
 const router = new Router();
 
@@ -16,13 +27,6 @@ router
   .delete("/gists/:id", remove)
   .patch("/gists/:id", update);
 
-app.use(async (ctx, next) => {
-  try {
-    await next();
-  } catch (err) {
-    console.error(err);
-  }
-});
 app.use(router.routes());
 app.use(router.allowedMethods());
 
