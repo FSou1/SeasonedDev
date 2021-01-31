@@ -9,23 +9,15 @@ import { authorized } from "./middlewares/authorized.ts";
 
 const app = new Application();
 
-const anonymousRouter = new Router();
-
-anonymousRouter
-  .post("/auth", auth);
-
-app.use(anonymousRouter.routes());
-
-app.use(authorized);
-
 const router = new Router();
 
 router
-  .post("/gists", create)
-  .get("/gists", list)
-  .get("/gists/:id", get)
-  .delete("/gists/:id", remove)
-  .patch("/gists/:id", update);
+  .post("/auth", auth)
+  .post("/gists", authorized, create)
+  .get("/gists", authorized, list)
+  .get("/gists/:id", authorized, get)
+  .delete("/gists/:id", authorized, remove)
+  .patch("/gists/:id", authorized, update);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
