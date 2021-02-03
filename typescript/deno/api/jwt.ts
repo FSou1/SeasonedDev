@@ -2,7 +2,7 @@ import { Context, decode } from "./deps.ts";
 
 export function getPayloadFromToken(context: Context) {
   try {
-    const token = getToken(context);
+    const token = getToken(context.request.headers);
     if (!token) {
       return null;
     }
@@ -18,15 +18,7 @@ export function getPayloadFromToken(context: Context) {
   }
 }
 
-export function getToken(context: Context) {
-  try {
-    return getTokenFromHeaders(context.request.headers);
-  } catch {
-    return null;
-  }
-}
-
-function getTokenFromHeaders(headers: Headers) {
+export function getToken(headers: Headers) {
   const authorization = headers.get("Authorization");
   if (!authorization) {
     return null;

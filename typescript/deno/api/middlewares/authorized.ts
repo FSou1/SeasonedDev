@@ -5,18 +5,19 @@ export async function authorized(context: Context, next: any) {
   const secret = Deno.env.get("API_SECRET") as string;
 
   try {
-    const jwt = getToken(context);
+    const jwt = getToken(context.request.headers);
     if (!jwt) {
-      context.throw(401, "Unauthorized");
+      throw new Error("!jwt");
     }
 
     const payload = await verify(jwt, secret, "HS512");
     if (!payload) {
-      context.throw(401, "Unauthorized");
+      throw new Error("!payload");
     }
 
     await next();
   } catch (err) {
     console.log(err);
+    context.throw(401, "Unauthorized");
   }
 }
