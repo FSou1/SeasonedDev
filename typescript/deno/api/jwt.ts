@@ -1,6 +1,6 @@
 import { decode } from "./deps.ts";
 
-export function getToken(headers: Headers): string | null {
+export function getToken(headers: Headers) {
   const authorization = headers.get("Authorization");
   if (!authorization) {
     return null;

@@ -1,5 +1,5 @@
 # How to run
 
 ```
-deno run --allow-net mod.ts
+deno run -A mod.ts
 ```

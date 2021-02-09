@@ -1,6 +1,4 @@
-import { RouterContext } from "https://deno.land/x/oak@v6.4.1/router.ts";
-import { getNumericDate } from "https://deno.land/x/djwt@v2.1/mod.ts";
-import { create } from "../deps.ts";
+import { RouterContext, create, getNumericDate } from "../deps.ts";
 
 export async function auth(context: RouterContext) {
   if (!context.request.hasBody) {
