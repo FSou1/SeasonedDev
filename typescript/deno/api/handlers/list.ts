@@ -4,10 +4,13 @@
 // Status: 200 OK
 
 import { getQuery, RouterContext } from "../deps.ts";
+import { getPayloadFromToken } from "../jwt.ts";
 
 import { getGists } from "../service.ts";
 
 export async function list(context: RouterContext) {
+  const payload = getPayloadFromToken(context);
+
   const { skip, limit } = getQuery(context);
 
   const gists = await getGists(+skip || 0, +limit || 0);
