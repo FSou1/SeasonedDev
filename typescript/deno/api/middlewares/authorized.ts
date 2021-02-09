@@ -17,7 +17,7 @@ export async function authorized(context: Context, next: any) {
 
     await next();
   } catch (err) {
-    console.log(err);
+    console.error(err);
     context.throw(401, "Unauthorized");
   }
 }

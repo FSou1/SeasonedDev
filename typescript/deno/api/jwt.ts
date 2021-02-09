@@ -1,8 +1,27 @@
-import { Context, decode } from "./deps.ts";
+import { decode } from "./deps.ts";
 
-export function getPayloadFromToken(context: Context) {
+export function getToken(headers: Headers) {
+  const authorization = headers.get("Authorization");
+  if (!authorization) {
+    return null;
+  }
+
+  // Bearer asdfkjshfkj4hkfj34./sdfhjksdhfjk.34r
+  const [method, token] = authorization.split(" ");
+  if (method !== "Bearer") {
+    return null;
+  }
+
+  if (!token) {
+    return null;
+  }
+
+  return token;
+}
+
+export function getPayloadFromToken(headers: Headers) {
   try {
-    const token = getToken(context.request.headers);
+    const token = getToken(headers);
     if (!token) {
       return null;
     }
@@ -16,22 +35,4 @@ export function getPayloadFromToken(context: Context) {
   } catch {
     return null;
   }
-}
-
-export function getToken(headers: Headers) {
-  const authorization = headers.get("Authorization");
-  if (!authorization) {
-    return null;
-  }
-
-  const [method, token] = authorization.split(" ");
-  if (method !== "Bearer") {
-    return null;
-  }
-
-  if (!token) {
-    return null;
-  }
-
-  return token;
 }

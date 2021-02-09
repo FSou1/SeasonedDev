@@ -12,7 +12,7 @@ export async function auth(context: RouterContext) {
   }
 
   const responseBody = {
-    access_token: await getToken( getPayload(username) ),
+    access_token: await getToken(getPayload(username)),
   };
 
   context.response.body = responseBody;
@@ -28,7 +28,7 @@ function getToken(payload: any): Promise<string> {
 function getPayload(username: string) {
   return {
     username,
-    role: 'admin',
-    exp: getNumericDate(60 * 60)
+    role: "admin",
+    exp: getNumericDate(60 * 60),
   };
 }
