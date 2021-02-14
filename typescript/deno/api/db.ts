@@ -2,7 +2,22 @@ import { Bson, Collection, MongoClient } from "./deps.ts";
 
 async function connect(): Promise<Collection<IGistSchema>> {
   const client = new MongoClient();
-  await client.connect("mongodb://localhost:27017");
+  await client.connect({
+    db: "<db>",
+    tls: true,
+    servers: [
+      { 
+        host: "<host>",
+        port: 27017,
+      },
+    ],
+    credential: {
+      username: "<user>",
+      password: "<password>",
+      db: "<db>",
+      mechanism: "SCRAM-SHA-1",
+    },
+  });
   return client.database("gist_api").collection<IGistSchema>("gists");
 }
 
@@ -13,12 +28,13 @@ export async function insertGist(gist: any): Promise<string> {
 
 export async function fetchGists(skip: number, limit: number): Promise<any> {
   const collection = await connect();
-  return await collection.find().skip(skip).limit(limit).toArray();
+  return await collection.find({}, { noCursorTimeout: false } as any).skip(skip)
+    .limit(limit).toArray();
 }
 
 export async function fetchGist(id: string): Promise<any> {
   const collection = await connect();
-  return await collection.findOne({ _id: new Bson.ObjectId(id) });
+  return await collection.findOne({ _id: new Bson.ObjectId(id) }, { noCursorTimeout: false } as any);
 }
 
 export async function deleteGist(id: string): Promise<any> {
