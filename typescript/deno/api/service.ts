@@ -33,7 +33,7 @@ export function removeGist(id: string): Promise<number> {
   return deleteGist(id);
 }
 
-export async function patchGist(id: string, content: string): Promise<{ modifiedCount: number }> {
+export function patchGist(id: string, content: string): Promise<{ modifiedCount: number }> {
   return updateGist({ id, content });
 }
 

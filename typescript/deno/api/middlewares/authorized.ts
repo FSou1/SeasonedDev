@@ -1,7 +1,7 @@
 import { Context, verify } from "../deps.ts";
 import { getToken } from "../jwt.ts";
 
-export async function authorized(context: Context, next: any) {
+export async function authorized(context: Context, next: () => Promise<void>) {
   const secret = Deno.env.get("API_SECRET") as string;
 
   try {
