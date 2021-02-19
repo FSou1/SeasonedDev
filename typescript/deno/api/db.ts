@@ -1,20 +1,21 @@
+// deno-lint-ignore-file camelcase no-explicit-any
 import { Bson, Collection, MongoClient } from "./deps.ts";
 
 async function connect(): Promise<Collection<IGistSchema>> {
   const client = new MongoClient();
   await client.connect({
-    db: "<db>",
+    db: "gist_api",
     tls: true,
     servers: [
       { 
-        host: "<host>",
+        host: "cluster0-shard-00-02.vsk29.mongodb.net",
         port: 27017,
       },
     ],
     credential: {
-      username: "<user>",
-      password: "<password>",
-      db: "<db>",
+      username: "admin",
+      password: "rShIdPOGPTXVBlsJ",
+      db: "gist_api",
       mechanism: "SCRAM-SHA-1",
     },
   });

@@ -1,3 +1,4 @@
+// deno-lint-ignore-file camelcase
 import {
   deleteGist,
   fetchGist,
@@ -32,7 +33,7 @@ export function removeGist(id: string): Promise<number> {
   return deleteGist(id);
 }
 
-export async function patchGist(id: string, content: string): Promise<any> {
+export async function patchGist(id: string, content: string): Promise<{ modifiedCount: number }> {
   return updateGist({ id, content });
 }
 
