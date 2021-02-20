@@ -38,3 +38,7 @@ jobs:
       - name: Lint
         run: deno lint --unstable
         working-directory: typescript/deno/api
+        
+      - name: Unit tests
+        run: deno test --allow-env --allow-read
+        working-directory: typescript/deno/api
