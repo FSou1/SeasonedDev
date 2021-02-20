@@ -10,7 +10,7 @@ Deno.test('Test getToken: returns null if header is missing', () => {
 Deno.test('Test getToken: returns null if header[0] is not Bearer', () => {
     const headers = new Headers();
     headers.append('Authorization', 'Basic jedfhj324f.34rj3h4f.sdfjsdf');
-    assertEquals(getToken(headers), '1');
+    assertEquals(getToken(headers), null);
 });
 
 Deno.test('Test getToken: returns null if header[1] is missing', () => {
