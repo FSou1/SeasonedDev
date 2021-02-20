@@ -7,14 +7,14 @@ async function connect(): Promise<Collection<IGistSchema>> {
     db: "gist_api",
     tls: true,
     servers: [
-      { 
-        host: "cluster0-shard-00-02.vsk29.mongodb.net",
+      {
+        host: Deno.env.get("DB_HOST") as string,
         port: 27017,
       },
     ],
     credential: {
-      username: "admin",
-      password: "rShIdPOGPTXVBlsJ",
+      username: Deno.env.get("DB_USERNAME") as string,
+      password: Deno.env.get("DB_PASSWORD") as string,
       db: "gist_api",
       mechanism: "SCRAM-SHA-1",
     },
@@ -35,7 +35,10 @@ export async function fetchGists(skip: number, limit: number): Promise<any> {
 
 export async function fetchGist(id: string): Promise<any> {
   const collection = await connect();
-  return await collection.findOne({ _id: new Bson.ObjectId(id) }, { noCursorTimeout: false } as any);
+  return await collection.findOne(
+    { _id: new Bson.ObjectId(id) },
+    { noCursorTimeout: false } as any,
+  );
 }
 
 export async function deleteGist(id: string): Promise<any> {
