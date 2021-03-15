@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/primitive-ui/dist/css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .example {
+            margin-bottom: .5rem;
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            border: 1px solid #0366ee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Primitive UI</h1>
+
+        <h2>Containers</h2>
+        <div class="small-container example">
+            This is a small (800px) container centered with left and right padding.
+        </div>
+
+        <div class="medium-container example">
+            This is a medium (1000px) container centered with left and right padding.
+        </div>
+
+        <div class="container example">
+            This is a large (1200px) container centered with left and right padding.
+        </div>
+
+        <h2>Grid</h2>
+        <div class="flex-row">
+            <div class="flex-small example">1/2 small</div>
+            <div class="flex-small example">1/2 small</div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-large example">1/3 large</div>
+            <div class="flex-large example">1/3 large</div>
+            <div class="flex-large example">1/3 large</div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-small three-fourths example">.three-fourths small</div>
+            <div class="flex-small example">small</div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-small example">small</div>
+            <div class="flex-small two-thirds example">.two-thirds small</div>
+        </div>
+
+        <h2>Typography</h2>
+        <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade
+            from the root.</p>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+
+        <h3>Blockquote</h3>
+        <blockquote>
+            <p>Keep it secret. Keep it safe.</p>
+            <cite>Gandalf the Gray</cite>
+        </blockquote>
+
+        <h2>Buttons</h2>
+        <button>Button</button>
+        <input type="submit" value="Submit">
+        <input type="button" value="Input">
+        <a class="button">Link</a>
+
+        <h3>Accent Buttons</h3>
+        <button class="accent-button">Button</button>
+        <input type="submit" class="accent-button" value="Submit">
+        <input type="button" class="accent-button" value="Input">
+        <a class="button accent-button">Link</a>
+
+        <h3>Round Buttons</h3>
+        <button class="round-button">Button</button>
+        <input type="submit" class="round-button" value="Submit">
+        <input type="button" class="round-button" value="Input">
+        <a class="button round-button">Link</a>
+
+        <h3>Square Buttons</h3>
+        <button class="square-button">Button</button>
+        <input type="submit" class="square-button" value="Submit">
+        <input type="button" class="square-button" value="Input">
+        <a class="button square-button">Link</a>
+
+        <h3>Muted Buttons</h3>
+        <button class="muted-button">Button</button>
+        <input type="submit" class="muted-button" value="Submit">
+        <input type="button" class="muted-button" value="Input">
+        <a class="button muted-button">Link</a>
+
+        <h3>Full Width Buttons</h3>
+        <button class="full-button">Button</button>
+        <input type="submit" class="full-button" value="Submit">
+        <input type="button" class="full-button" value="Input">
+        <a class="button full-button accent-button">Link</a>
+
+        <h2>Forms</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First Name">
+            <label for="choose">Select</label>
+            <select id="choose">
+                <option disabled selected>Please select</option>
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+            </select>
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments"></textarea>
+            <label>
+                <input type="checkbox">
+                Remember me
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h3>Form Validation</h3>
+        <input type="text" id="name" placeholder="Name" class="has-error">
+        <input type="email" id="email" placeholder="Email" class="is-success">
+
+        <h2>Tables</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Head 1</th>
+                    <th>Head 2</th>
+                    <th>Head 3</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Footer 1</th>
+                    <th>Footer 2</th>
+                    <th>Footer 3</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Description 1</td>
+                    <td>Description 2</td>
+                    <td>Description 3</td>
+                </tr>
+                <tr>
+                    <td>Description 1</td>
+                    <td>Description 2</td>
+                    <td>Description 3</td>
+                </tr>
+                <tr>
+                    <td>Description 1</td>
+                    <td>Description 2</td>
+                    <td>Description 3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Lists</h2>
+        <ul>
+            <li>List item one
+                <ul>
+                    <li>Nested list item</li>
+                </ul>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+
+        <h2>Code</h2>
+        <p>Style has been added for inline <code>&lt;code&gt;</code> tags, and <code>&lt;kbd&gt;</code> is a
+            <kbd>keyboard input</kbd>.
+        </p>
+        <pre>
+            <code>
+class Voila {
+public:
+    // Voila
+    static const string VOILA = "Voila";
+}
+            </code>
+        </pre>
+
+        <h2>Helpers</h2>
+        <h3>Vertical Center</h3>
+        <div class="vertical-center">
+            <div class="example">Vertically centered</div>
+        </div>
+
+        <h3>Text Alignment</h3>
+        <p class="text-left example">Left</p>
+        <p class="text-center example">Center</p>
+        <p class="text-right example">Right</p>
+    </div>
+</body>
+
+</html>

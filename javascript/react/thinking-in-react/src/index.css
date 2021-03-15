@@ -1,0 +1,14 @@
+/* @import url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'); */
+/* @import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'); */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'); */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'); */
+/* @import url('https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css'); */
+@import url('https://unpkg.com/primitive-ui/dist/css/main.css');
+
+body {
+    margin: 50px;
+}
+
+.out-of-stock {
+    color: red;
+}
