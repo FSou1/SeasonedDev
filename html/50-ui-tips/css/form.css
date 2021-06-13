@@ -1,0 +1,16 @@
+form {
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+small {
+    color: #6c757d;
+}
+
+input {
+    margin-bottom: 0;
+    width: 250px;
+}

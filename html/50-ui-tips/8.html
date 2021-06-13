@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tip #8: Show password rules right away</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <script src="https://kit.fontawesome.com/9e88ed6892.js" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <style>
+        input {
+            width: 330px;
+        }
+
+        small {
+            min-width: 160px;
+            display: inline-block;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .after label {
+            display: block !important;
+        }
+
+        .after input {
+            display: inline !important;
+        }
+
+        .fas {
+            padding: 10px 0px;
+        }
+    </style>
+    <script>
+        const onPasswordChange = (event) => {
+            const password = event.value;
+
+            if (hasLowerCase(password)) {
+                document.querySelector('.pwd_one_lowercase').classList.add('success');
+            } else {
+                document.querySelector('.pwd_one_lowercase').classList.remove('success');
+            }
+
+            if (hasUpperCase(password)) {
+                document.querySelector('.pwd_one_uppercase').classList.add('success');
+            } else {
+                document.querySelector('.pwd_one_uppercase').classList.remove('success');
+            }
+
+            if (hasNumber(password)) {
+                document.querySelector('.pwd_one_number').classList.add('success');
+            } else {
+                document.querySelector('.pwd_one_number').classList.remove('success');
+            }
+
+            if (inRange(password)) {
+                document.querySelector('.pwd_min_max_length').classList.add('success');
+            } else {
+                document.querySelector('.pwd_min_max_length').classList.remove('success');
+            }
+        }
+
+        function hasLowerCase(str) {
+            return (/[a-z]/.test(str));
+        }
+
+        function hasUpperCase(str) {
+            return (/[A-Z]/.test(str));
+        }
+
+        function hasNumber(str) {
+            return (/[0-9]/.test(str));
+        }
+
+        function inRange(str) {
+            return str.length >= 8 && str.length <= 20;
+        }
+
+        function togglePassword() {
+            const password = document.querySelector('.input_password');
+
+            password.type = password.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="headline">
+        <h1 class="hidden">Tip #8: Show password rules right away</h1>
+        <div></div>
+        <div>
+            <button class="btn-show">💡</button>
+        </div>
+    </div>
+
+    <div class="comparison">
+        <div class="before">
+            <form>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password">
+                    <small>Required</small>
+                </div>
+            </form>
+        </div>
+
+        <div class="after hidden">
+            <form>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="input_password" oninput="onPasswordChange(this)">
+                    <i class="fas fa-eye" onclick="togglePassword()"></i>
+                    <div>
+                        <small class="pwd_one_lowercase">· One lowercase character</small>
+                        <small class="pwd_one_uppercase">· One uppercase character</small>
+                    </div>
+                    <div>
+                        <small class="pwd_one_number">· One number</small>
+                        <small class="pwd_min_max_length">· Must be 8-20 characters long</small>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="navigation">
+            <ul class="nav_links">
+                <li><a href="1.html">[ 1 ]</a></li>
+                <li><a href="2.html">[ 2 ]</a></li>
+                <li><a href="3.html">[ 3 ]</a></li>
+                <li><a href="4.html">[ 4 ]</a></li>
+                <li><a href="5.html">[ 5 ]</a></li>
+                <li><a href="6.html">[ 6 ]</a></li>
+                <li><a href="7.html">[ 7 ]</a></li>
+                <li><a href="8.html">[ 8 ]</a></li>
+                <li><a href="9.html">[ 9 ]</a></li>
+                <li><a href="10.html">[ 10 ]</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

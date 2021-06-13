@@ -1,0 +1,47 @@
+body {
+    max-width: 1280px;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.comparison {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comparison>div {
+    width: 48%;
+}
+
+.before {
+    border-top: 4px dashed #ef5350;
+}
+
+.hidden {
+    display: none;
+}
+
+.after {
+    border-top: 4px dashed green;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav_links li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.nav_links a {
+    color: gray;
+    opacity: 0.1;
+}
