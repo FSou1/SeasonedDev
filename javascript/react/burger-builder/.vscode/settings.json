@@ -1,0 +1,12 @@
+{
+    "deno.enable": true,
+    "typescript.tsdk": "C:/Users/myfso/AppData/Roaming/npm/node_modules/typescript/lib",
+    "editor.fontSize": 16,
+    "debug.console.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [80],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#424C55",
+    }
+}
