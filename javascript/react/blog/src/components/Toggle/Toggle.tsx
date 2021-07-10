@@ -1,5 +1,7 @@
+import styles from './Toggle.css';
+
 const Toggle = () => (
-    <div className={'Toolbar'}>
+    <div className={styles.Toggle}>
         Toolbar
     </div>
 );

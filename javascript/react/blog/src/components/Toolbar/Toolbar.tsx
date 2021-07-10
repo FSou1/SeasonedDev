@@ -1,7 +1,7 @@
-import './Toolbar.css';
+import styles from './Toolbar.css';
 
 const Toolbar = () => (
-    <div className={'Toolbar'}>
+    <div className={styles.Toolbar}>
         Toolbar
     </div>
 );
