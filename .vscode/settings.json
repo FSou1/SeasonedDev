@@ -8,5 +8,6 @@
     "editor.rulers": [80],
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#424C55",
-    }
+    },
+    "window.zoomLevel": 2
 }
