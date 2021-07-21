@@ -26,7 +26,7 @@ export function getPayloadFromToken(headers: Headers) {
       return null;
     }
 
-    const { signature, payload } = decode(token);
+    const { payload } = decode(token);
     if (!payload) {
       return null;
     }
