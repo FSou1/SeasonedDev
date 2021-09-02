@@ -33,12 +33,12 @@ jobs:
       - name: Output deno version
         run: |
           deno --version
-        working-directory: typescript/deno/api
+        working-directory: typescript/deno/discord
           
       - name: Lint
         run: deno lint --unstable
-        working-directory: typescript/deno/api
+        working-directory: typescript/deno/discord
         
       - name: Unit tests
         run: deno test --allow-env --allow-read
-        working-directory: typescript/deno/api
+        working-directory: typescript/deno/discord
