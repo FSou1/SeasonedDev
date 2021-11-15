@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  font-size: calc( 12px + (24 – 12) * ( (100vw – 400px) / ( 800 – 400) ));
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.display {
+  background-color: rebeccapurple;
+  border-radius: 7px;
+  padding: 7px;
+  text-align: right;
+}
+
+.row {
+  display: flex;
+}
+
+.cellpad {
+  margin-top: 5px;
+}
+
+.cell {
+  background-color: royalblue;
+  border-radius: 7px;
+  margin: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: darkslateblue;
+}
+
+.total {
+  background-color: tomato;
+}
+
+.total:hover {
+  background-color: red;
+}
+
+.wd_25 {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+}
+
+.wd_50 {
+  width: 50%;
+  aspect-ratio: 2 / 1;
+}
