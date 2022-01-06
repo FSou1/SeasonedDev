@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+# How to import CSS class names in React properly
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this video I'll show you how to make your React application more reliable. Your components and class names will always be consistent. And the next time, when you remove the class name so that it no longer exists, you will get a compilation error.
 
-## Available Scripts
+In this video you'll also know how to fix the Cannot find module './App.css' error. If you want to properly import CSS classes into TSX by checking for their existence when compiling your application, implement this approach so that you don't have inconsistencies between your components and styles.
 
-In the project directory, you can run:
+Watch on youtube: https://youtu.be/t-tQuDL-cS8
 
-### `yarn start`
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/t-tQuDL-cS8/0.jpg)](https://youtu.be/t-tQuDL-cS8)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Used commands:
+* `npx create-react-app my-app --template typescript`
+* `npm run start`
+* `npm install -D dts-css-modules-loader`
+* `git add . && git commit -m "Initial commit"`
+* `npm run eject`
+* `npm run build`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Join the Discord: https://discord.gg/EnbnaP7x
 
-### `yarn test`
+Follow Me Online Here:
+* GitHub: https://github.com/FSou1
+* LinkedIn: https://www.linkedin.com/in/maxim-zhukov-0648a8b5/
+* Telegram: https://t.me/seasoneddev
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#react #css #typescript

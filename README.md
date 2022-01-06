@@ -4,9 +4,11 @@ This repository contains artifacts for the [SeasonedDev](https://www.youtube.com
 
 ## Table of content
 
-* [Build a GraphQL Server with Deno and MongoDB Atlas](/typescript/deno/graphql/01)
-* [The Biggest Problem with running CPU intensive operations using Node.js](/javascript/node.js/single-threaded-event-loop)
-* [Loan Calculator - a portfolio project tutorial](/typescript/react/loan-calc)
+* [Build a GraphQL server with Deno and MongoDB Atlas](/typescript/deno/graphql/01)
+* [The Biggest problem with running CPU intensive operations using Node.js](/javascript/node.js/single-threaded-event-loop)
+* [Loan calculator - a portfolio project tutorial](/typescript/react/loan-calc)
+* [How to scrape Google Maps data with Nodejs and Puppeteer](https://youtu.be/5xOD4-M2jSw)
+* [How to import CSS class names in React properly](/typescript/react/import-css-classes)
 
 ## Discord
 Join the Discord: https://discord.gg/EnbnaP7x
