@@ -4,6 +4,7 @@ This repository contains artifacts for the [SeasonedDev](https://www.youtube.com
 
 ## Table of content
 
+* [Setup environment variables with Deno using dotenv](/typescript/deno/env)
 * [Build a GraphQL server with Deno and MongoDB Atlas](/typescript/deno/graphql/01)
 * [The Biggest problem with running CPU intensive operations using Node.js](/javascript/node.js/single-threaded-event-loop)
 * [Loan calculator - a portfolio project tutorial](/typescript/react/loan-calc)
