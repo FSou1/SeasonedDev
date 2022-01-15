@@ -16,7 +16,7 @@ Used commands:
 * `npm run eject`
 * `npm run build`
 
-Join the Discord: https://discord.gg/EnbnaP7x
+Join the Discord: https://discord.gg/V4yMGPQzRB
 
 Follow Me Online Here:
 * GitHub: https://github.com/FSou1

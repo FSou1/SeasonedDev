@@ -6,7 +6,7 @@ Watch on youtube: https://youtu.be/jma5FVjjxMk
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jma5FVjjxMk/0.jpg)](https://youtu.be/jma5FVjjxMk)
 
-Join the Discord: https://discord.gg/EnbnaP7x
+Join the Discord: https://discord.gg/V4yMGPQzRB
 
 Follow Me Online Here:
 * GitHub: https://github.com/FSou1

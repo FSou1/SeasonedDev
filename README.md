@@ -4,6 +4,7 @@ This repository contains artifacts for the [SeasonedDev](https://www.youtube.com
 
 ## Table of content
 
+* [Avoiding leaks in Deno, Node.js, everywhere](/typescript/deno/graphql/02)
 * [Setup environment variables with Deno using dotenv](/typescript/deno/env)
 * [Build a GraphQL server with Deno and MongoDB Atlas](/typescript/deno/graphql/01)
 * [The Biggest problem with running CPU intensive operations using Node.js](/javascript/node.js/single-threaded-event-loop)
@@ -12,7 +13,7 @@ This repository contains artifacts for the [SeasonedDev](https://www.youtube.com
 * [How to import CSS class names in React properly](/typescript/react/import-css-classes)
 
 ## Discord
-Join the Discord: https://discord.gg/EnbnaP7x
+Join the Discord: https://discord.gg/V4yMGPQzRB
 
 ## Follow me here
 * GitHub: https://github.com/FSou1

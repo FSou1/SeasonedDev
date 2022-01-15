@@ -9,7 +9,7 @@ Watch on youtube: https://youtu.be/x6D8xO_ZAXg
 ## Links from the video
 * https://deno.land/x/dotenv@v3.1.0
 
-Join the Discord: https://discord.gg/EnbnaP7x
+Join the Discord: https://discord.gg/V4yMGPQzRB
 
 Follow Me Online Here:
 * GitHub: https://github.com/FSou1
