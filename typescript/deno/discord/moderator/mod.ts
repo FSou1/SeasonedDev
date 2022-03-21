@@ -1,4 +1,4 @@
-import { Client, Intents, Message } from "./deps.ts";
+import { Client, Intents, Message, env } from "./deps.ts";
 import { capitalsExceeded, hasBlacklistedWords } from "./filters.ts";
 
 const client = new Client();
@@ -21,6 +21,6 @@ client.on("messageCreate", (msg: Message): void => {
   }
 });
 
-const token = Deno.env.get("BOT_TOKEN");
+const token = env["BOT_TOKEN"];
 
 client.connect(token, Intents.None);
