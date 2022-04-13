@@ -4,6 +4,7 @@ This repository contains artifacts for the [SeasonedDev](https://www.youtube.com
 
 ## Table of content
 
+* [How to Bypass CAPTCHAs With Puppeteer](/javascript/node.js/2captcha)
 * [Avoiding leaks in Deno, Node.js, everywhere](/typescript/deno/graphql/02)
 * [Setup environment variables with Deno using dotenv](/typescript/deno/env)
 * [Build a GraphQL server with Deno and MongoDB Atlas](/typescript/deno/graphql/01)
