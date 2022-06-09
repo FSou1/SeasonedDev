@@ -13,6 +13,8 @@
   "dependencies": {
     "discord.js": "^13.7.0",
     "dotenv": "^16.0.1",
-    "nodemon": "^2.0.16"
+    "ebay-parser": "^1.0.7",
+    "nodemon": "^2.0.16",
+    "puppeteer": "^14.1.2"
   }
 }
